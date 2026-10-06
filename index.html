@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Countdown</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <main class="page">
+    <div class="card">
+      <p class="label">Counting down to</p>
+      <p class="target-display" id="targetDisplay">&mdash;</p>
+
+      <div class="countdown" id="countdown">
+        <div class="unit">
+          <span class="unit__value" id="daysValue">00</span>
+          <span class="unit__label">Days</span>
+        </div>
+        <span class="sep">:</span>
+        <div class="unit">
+          <span class="unit__value" id="hoursValue">00</span>
+          <span class="unit__label">Hours</span>
+        </div>
+        <span class="sep">:</span>
+        <div class="unit">
+          <span class="unit__value" id="minutesValue">00</span>
+          <span class="unit__label">Minutes</span>
+        </div>
+        <span class="sep">:</span>
+        <div class="unit">
+          <span class="unit__value" id="secondsValue">00</span>
+          <span class="unit__label">Seconds</span>
+        </div>
+      </div>
+
+      <p class="complete-message" id="completeMessage" hidden>&#10024; It's time! &#10024;</p>
+
+      <div class="presets" id="presetRow">
+        <button type="button" class="preset" data-preset="1h">+1 hour</button>
+        <button type="button" class="preset" data-preset="24h">+24 hours</button>
+        <button type="button" class="preset" data-preset="7d">+7 days</button>
+        <button type="button" class="preset" data-preset="newyear">Next New Year</button>
+      </div>
+
+      <form class="custom-target" id="customTargetForm">
+        <input type="datetime-local" id="customTargetInput" aria-label="Custom target date and time" />
+        <button type="submit" class="btn btn--primary">Set</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
